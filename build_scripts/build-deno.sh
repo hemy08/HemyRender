@@ -1,0 +1,1 @@
+deno compile --allow-all --target x86_64-pc-windows-msvc -o executables/hemyrender.exe src/index.ts

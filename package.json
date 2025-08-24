@@ -1,0 +1,41 @@
+{
+  "name": "hemyrender",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Hemy BaiZe",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "hemyrender": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "pkg": "npm run build && pkg . --out-path executables/",
+    "pkg:win": "npm run build && pkg . --targets node18-win-x64 --out-path executables",
+    "pkg:all": "npm run build && pkg . --targets node22-win-x64,node22-linux-x64,node22-macos-x64 --out-path executables"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "katex": "^0.16.22",
+    "mathjax-full": "^3.2.2",
+    "nexe": "^5.0.0-beta.4",
+    "yargs": "17.7.2"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/node": "^18.15.0",
+    "@types/yargs": "^17.0.33",
+    "@vercel/ncc": "^0.38.3",
+    "esbuild": "^0.25.9",
+    "nexe": "^5.0.0-beta.4",
+    "pkg": "^5.8.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.5.3",
+    "@types/markdown-it": "^14.1.1",
+    "@types/markdown-it-emoji": "^3.0.1",
+    "highlight.js": "^11.9.0",
+    "markdown-it-highlightjs": "^4.1.0"
+  },
+  "private": true
+}
